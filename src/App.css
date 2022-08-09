@@ -14,11 +14,10 @@ body {
 
 .card {
     background-color: white;
-    height: 50%;
-    width: 33%;
     padding: 0.4rem;
     border: 10px double black;
     border-radius: 1rem;
+    height: 100%;
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.7);
     transform: scale(0.8);
     position: relative;
@@ -46,8 +45,6 @@ body {
 }
 
 .container {
-    display: flex;
-    gap: 1rem;
     height: 100%;
 }
 
@@ -67,8 +64,19 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 80%;
-    padding: 1rem;
+    width: 400px;
+    padding: .75rem;
+    border-radius: 4px;
+}
+
+.create2 {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 400px;
+    padding: .75rem;
     border-radius: 4px;
     border: 2.2px solid rgba(0, 0, 0, 0.7);
 }
@@ -82,7 +90,7 @@ body {
     border-bottom: 1px solid black;
 }
 
-form {
+.loginForm {
     padding: 1.4rem 0;
     background-color: white;
     width: 400px;
@@ -99,7 +107,7 @@ form {
     transform: translate(-50%, -60%);
 }
 
-form input {
+.loginForm input {
     margin-bottom: 1rem;
     width: 60%;
     padding: 3px 2px;
@@ -139,9 +147,9 @@ form input {
 }
 
 .blogs {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 10%;
+    display: grid;
+    place-content: center;
+    grid-template-columns: 600px;
 }
 
 .signOutBtn {
@@ -182,8 +190,41 @@ form input {
     background-color: rgb(50, 136, 50);
 }
 
+.cancelBtn {
+    background-color: rgb(246, 126, 124);
+    color: white;
+    font-size: .6rem;
+    border-radius: 5px;
+    border: none;
+    padding: .4rem .75rem;
+    cursor: pointer;
+}
+.cancelBtn:hover {
+    background-color: rgb(239, 49, 46);
+}
+
+.btnContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.btnContainer2 {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+}
+
 .deleteBtn {
     background-color: rgb(223, 53, 53);
+    padding: .2rem .4rem;
+    color: white;
+}
+
+.hideBtn {
+    background-color: rgb(138, 179, 255);
     padding: .2rem .4rem;
     color: white;
 }
@@ -193,4 +234,17 @@ form input {
     padding: 1rem;
     color: white;
     border-radius: 4px;
+}
+
+.likeBtn {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 99%;
+    display: grid;
+    place-content: center;
+    place-items: center;
+}
+
+.likeBtn:hover {
+    background-color: rgb(201, 190, 190);
 }
